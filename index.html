@@ -6,8 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
 <body>
-    <div>
+    <div >
+        <div id="header">
+            <h1>{{loginMessage}}</h1>
+        </div>
         <form action="user.php" method="post">
             <div class="form-group">
                 <label for="inputUser">User Name</label>
@@ -19,6 +23,14 @@
               </div>
               <button type="submit" class="btn btn-primary">Submit</button>
         </form> 
-    </div>    
+    </div>
+    <script>
+        var myObject=new Vue({
+            el: '#header',
+            data:{
+                loginMessage:'Please Log in'
+            }
+        })
+    </script>    
 </body>
 </html>
